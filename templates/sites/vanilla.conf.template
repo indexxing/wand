@@ -4,6 +4,7 @@ server {
     location {{ (parseUrl .Env.WEB_VANILLA_PLAY).Path }}/ {
         root   /usr/share/nginx/vanilla/play/;
         index  index.html index.htm;
+        add_header Access-Control-Allow-Origin *;
     }
 
     location ~ ^/(.*)/penguin/create {
@@ -120,6 +121,7 @@ server {
     location / {
         root   /usr/share/nginx/vanilla/media;
         index  index.html index.htm;
+        add_header Access-Control-Allow-Origin *;
     }
 
     location /social/autocomplete/v2/search/suggestions {

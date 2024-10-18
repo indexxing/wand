@@ -5,6 +5,7 @@ server {
     location {{ (parseUrl .Env.WEB_LEGACY_PLAY).Path }} {
         root /usr/share/nginx/legacy/;
         index index.html index.htm;
+        add_header Access-Control-Allow-Origin *;
     }
     location / {
         root /usr/share/nginx/legacy/{{ (parseUrl .Env.WEB_LEGACY_PLAY).Path }};
@@ -56,6 +57,7 @@ server {
     location / {
         root   /usr/share/nginx/legacy/media;
         index  index.html index.htm;
+        add_header Access-Control-Allow-Origin *;
     }
 
 }

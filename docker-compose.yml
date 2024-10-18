@@ -230,6 +230,32 @@ services:
       - redis:redis
       - houdini_login:login
     entrypoint: ["dockerize", "-wait", "tcp://login:${GAME_LOGIN_PORT}", "python", "./main.py"]
+  websockify:
+    build: ./websockify/docker
+    restart: always
+    env_file:
+      - .env
+    networks:
+      - wand
+    ports:
+      - ${WEBSOCKIFY_PORT}:${WEBSOCKIFY_PORT}
+    volumes:
+      - ./templates/websockify:/data
+    depends_on:
+      - houdini_login
+      - houdini_blizzard
+      - houdini_glaciar
+      - houdini_avalanche
+      - houdini_yeti
+      - snowflake
+    links:
+      - houdini_login:login
+      - houdini_blizzard:blizzard
+      - houdini_glaciar:glaciar
+      - houdini_avalanche:avalanche
+      - houdini_yeti:yeti
+      - snowflake:snow
+    command: ["--token-plugin", "ReadOnlyTokenFile", "--token-source", "/data/token", "${WEBSOCKIFY_PORT}"]
 
 networks:
   wand:
