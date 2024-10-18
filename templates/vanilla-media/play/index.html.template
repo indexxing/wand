@@ -74,7 +74,7 @@
         </div>
     </div>
     <ul class="navbar navbar-right">
-        <li><a id="logout-link" class="logout" href="/penguin/logout"><img src="/sites/play.clubpenguin.com/themes/snowball/img/icon-logout.png"> Log off</a></li>
+        <li><a id="logout-link" class="logout" href="/#/login"><img src="/sites/play.clubpenguin.com/themes/snowball/img/icon-logout.png"> Log off</a></li>
     </ul>
 </nav>
 <div id="banner"></div></header>    
