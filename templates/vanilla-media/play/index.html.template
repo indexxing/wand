@@ -83,7 +83,8 @@
             <div id="membership-buttons">
                 <a class="membership-button" href="https://secured.clubpenguin.com/membership">About Membership</a>
             </div>
-            <img src="/assets/December-CPI-Announcement-Billboard.jpg">
+            <!--<img src="/assets/December-CPI-Announcement-Billboard.jpg">-->
+            <img src="/assets/0618-Marketing-Evergreen-Homepage-Billboard-Igloos.jpg">
         </section>
         <section id="actions">
             <img class="cp-logo" src="/assets/sites/default/themes/snowball/img/club-penguin-logo.png" />
