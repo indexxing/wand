@@ -1,2 +1,7 @@
-./data
+/.data
+dash
+houdini
 legacy-media
+vanilla-media
+/websockify
+.env
